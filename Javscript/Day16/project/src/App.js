@@ -1,24 +1,25 @@
 import logo from './logo.svg';
 import './App.css';
+import Usestate from './Usestate';
+import Counter from './counter';
+import Countertable from './Countertable';
+import Textdata from './Textdata';
+import Counter1 from './counter1';
+import Countertable1 from './countertable1';
+import Text from './text';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+          {/* <Usestate></Usestate>
+          <Counter></Counter>
+          <Countertable></Countertable>*/}
+          <Textdata></Textdata> 
+          <Counter1/> <br/>
+          <Countertable1/> <br/>
+          <Text />
+
+          </>
   );
 }
 
