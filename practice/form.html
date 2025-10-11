@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    enter the name:
+    <input type="text" id="t" pattern="[a-zA-Z\s]+"/><br>
+    enter the last name:
+    <input type="text" id="t1"/><br>
+    enter the marks:
+    <input type="number" id="n"/>
+    <button type="submit" onclick="show()">show data</button>
+    <table border="1px" id="p" ></table>
+       
+   
+    
+    <script>
+        function show()
+        {
+            let name=document.getElementById("t").value;
+            let lname=document.getElementById("t1").value;
+            let marks=document.getElementById("n").value;
+            let stu={
+                name:name,
+                lname:lname,
+                marks:marks
+            }
+            document.getElementById("p").innerHTML= `<tr><th>name</th>
+        <th>lname</th>
+    <th>marks</th></tr>
+    <tr><td>${name}</td><td>${lname}</td><td>${marks}</td></tr>`
+
+            
+    let a=name.substring(0,2)+lname.slice(-2)+marks;
+    console.log(a);
+            if(name.trim()=="")
+        {
+            alert("please enter your name");
+        }else if(lname.trim()=="")
+        {
+            alert("please enter your lastname");
+        }
+        else if(marks.trim()==""){
+alert("enter only number marks");
+        }
+      
+        }
+    </script>
+    
+</body>
+</html>

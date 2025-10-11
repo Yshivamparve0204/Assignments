@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    enter the name:
+    <input type="text" id="t" ><br>
+    enter the lname:
+    <input type="text" id="t1"><br>
+    enter the mark:
+    <input type="number" id="n"><br>
+    <button type="display" onclick="display()">display</button>
+    <ul id="outputlist">
+ 
+    </ul>
+    <script>
+        function display()
+        {
+            let a=document.getElementById("t").value;
+            let b=document.getElementById("t1").value;
+            let c=Number(document.getElementById("n").value);
+           const stud = {
+            first: a,
+            second :b,
+            marks :c
+           }
+           let output= document.getElementById("outputlist");
+           Object.values(stud).forEach(value=>{
+            const listitem = document.createElement("li");
+            listitem.textContent = value;
+            output.appendChild(listitem);
+           })
+
+
+        }
+    </script>
+    
+    
+</body>
+</html>

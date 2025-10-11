@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h"></h1>
+    <script>
+        function updatetime()
+        {
+            const D=new Date();
+            const option={ weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit' };
+            const formattedDateTime =  D.toLocaleString(undefined, options);
+            document.getElementById('h').innerHTML = formattedDateTime;
+        }
+        updateTime(); // Display time immediately
+        setInterval(updateTime, 1000); // Update every second
+    </script>
+</body>
+</html>

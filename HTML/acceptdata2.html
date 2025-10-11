@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    enter the firstname:
+    <input type="text" id="t"><br>
+     enter lastname:
+     <input type="text" id="t1"><br>
+     enter the age:
+     <input type="number" id ="n"><br>
+     <button type="display" onclick="display()">display</button>
+     <p id="p"> </p>
+     <script>
+        function display(){
+            let f=document.getElementById("t").value;
+            let l=document.getElementById("t1").value;
+            let n=document.getElementById("n").value;
+            let value= [firstname=f,lastname=l,age=n
+
+        ];
+        let s=value.map(value=>slice(0,2));
+
+        
+        document.getElementById("p").innerHTML=s;
+        }
+     </script>
+
+
+</body>
+</html>
